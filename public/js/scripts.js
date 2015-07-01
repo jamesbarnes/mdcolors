@@ -20,7 +20,7 @@ function write(i) {
     // 	var s = t.expand(nuggets[i]);
     // 	document.getElementById("replace").innerHTML = s;
 
-  		var t = jsontemplate.Template("<div class='full-width inline-image-panel wide bdd-composable-inline-image' style='max-width: 1440px;';'><h3 class='headline'>{headline}{graphtitle}</h3><figure><img class='nuggetimage' src='{imageurl}' style='max-width:703px'><figcaption class='secondary-text'>{caption}</figcaption></figure></div><div class='source'>Parent article: <a href='{url}'>{articletitle}</a></div>");
+  		var t = jsontemplate.Template("<div class='full-width inline-image-panel wide bdd-composable-inline-image' style='max-width: 1440px;';'><h3 class='headline'>{headline}{graphtitle}</h3><figure><img class='nuggetimage' src='{imageurl}' ><figcaption class='secondary-text'>{caption}</figcaption></figure></div><div class='source'>Parent article: <a href='{url}'>{articletitle}</a></div>");
   		var s = t.expand(nuggets[i]);
       		document.getElementById("replace").innerHTML = s;
     
