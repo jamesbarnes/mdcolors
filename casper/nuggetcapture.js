@@ -1,11 +1,13 @@
 var casper = require('casper').create();
 
 casper.start('http://localhost:9292/', function() {
+	this.viewportSize = { width:1920, height:1080 };
+
     this.echo(this.getTitle());
 });
 
 casper.takePics = function() {
-	var imagename = casper.getElementAttribute('.nuggetimage','src')
+		var imagename = casper.getElementAttribute('.nuggetimage','src')
        	var filename = imagename.substring(imagename.lastIndexOf('/')+1)
        	var slug = filename.split(".")[0];
        	var shotname = slug + "-nugget.png"
@@ -16,6 +18,7 @@ casper.takePics = function() {
 
 casper.advancePage = function() {
 	this.click('input[type="button"]');
+	
     this.wait(1000, function() { this.takePics() });
 };
 
