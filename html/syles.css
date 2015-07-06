@@ -1,0 +1,105 @@
+#DIV_1 {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(66, 66, 66);
+    float: left;
+    height: 302px;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    width: 1076px;
+    perspective-origin: 538px 151px;
+    transform-origin: 538px 151px;
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal normal normal 16px/25.6000003814697px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    margin: 16px 0px;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_1*/
+
+#DIV_1:after {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(66, 66, 66);
+    display: table;
+    text-rendering: optimizeLegibility;
+    width: 1px;
+    perspective-origin: 0.5px 0px;
+    transform-origin: 0.5px 0px;
+    content: '';
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal normal normal 16px/25.6000003814697px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#DIV_1:after*/
+
+#FIGURE_2 {
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    height: 302px;
+    position: relative;
+    text-rendering: optimizeLegibility;
+    width: 1076px;
+    perspective-origin: 538px 151px;
+    transform-origin: 538px 151px;
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal normal normal 16px/25.6000003814697px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    margin: 0px;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#FIGURE_2*/
+
+#IMG_3 {
+    box-sizing: border-box;
+    color: rgb(66, 66, 66);
+    display: block;
+    height: 302px;
+    max-width: 100%;
+    text-rendering: optimizeLegibility;
+    width: 525.3125px;
+    perspective-origin: 262.65625px 151px;
+    transform-origin: 262.65625px 151px;
+    border: 0px none rgb(66, 66, 66);
+    font: normal normal normal normal 16px/25.6000003814697px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    margin: 0px 25.359375px 0px 367.109375px;
+    outline: rgb(66, 66, 66) none 0px;
+}/*#IMG_3*/
+
+#FIGCAPTION_4 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(158, 158, 158);
+    height: 43px;
+    position: absolute;
+    text-align: right;
+    text-rendering: optimizeLegibility;
+    width: 158.1875px;
+    align-self: stretch;
+    perspective-origin: 79.09375px 21.5px;
+    transform-origin: 79.09375px 21.5px;
+    border: 0px none rgb(158, 158, 158);
+    font: normal normal normal normal 14px/14px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    margin: 0px 0px 0px 183.546875px;
+    outline: rgb(158, 158, 158) none 0px;
+    padding: 15px 0px 0px;
+}/*#FIGCAPTION_4*/
+
+#FIGCAPTION_4:before {
+    box-sizing: border-box;
+    color: rgb(158, 158, 158);
+    display: block;
+    height: 2px;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    text-rendering: optimizeLegibility;
+    top: 0px;
+    width: 50px;
+    align-self: stretch;
+    perspective-origin: 25px 1px;
+    transform-origin: 25px 1px;
+    content: '';
+    border-top: 2px solid rgb(66, 66, 66);
+    border-right: 0px none rgb(158, 158, 158);
+    border-bottom: 0px none rgb(158, 158, 158);
+    border-left: 0px none rgb(158, 158, 158);
+    font: normal normal normal normal 14px/14px RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    outline: rgb(158, 158, 158) none 0px;
+}/*#FIGCAPTION_4:before*/
+
