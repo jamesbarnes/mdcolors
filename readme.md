@@ -1,5 +1,3 @@
-#Nugget Capture
+#Material Design Colors
 
-This slaps together a bunch of things with the goal of creating the downloadable nuggets.
-
-It uses Rack to stand up a localhost from which the rest of the code can be executed.
+This lets users upload an image, gets prominent colors using vibrant.js, then finds the closest colors in the Material design palette.
