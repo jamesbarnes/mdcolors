@@ -1,100 +1,63 @@
-var preview = document.querySelector('img');
+Dropzone.autoDiscover = false;
 
 // The recommended way from within the init configuration:
 Dropzone.options.myDropzone = {
+  thumbnailWidth: null,
+  thumbnailHeight: 600,  
   init: function() {
     this.on("success", function(file) {
-      alert("Added file.");
-
+      $('.dz-message span').hide();
+      // var preview = document.querySelector('img');
       var reader  = new FileReader();
 
-      reader.onloadend = function () {
-        preview.src = reader.result;
-      }
+      // reader.onloadend = function () {
+      //   preview.src = reader.result;
+      //   preview.crossOrigin = "Anonymous";
+      // }
 
-      if (file) {
-        reader.readAsDataURL(file);
-      } else {
-        preview.src = "";
-      }
-
+      // if (file) {
+      //   reader.readAsDataURL(file);
+      // } else {
+      //   preview.src = "";
+      // }
+      getImage();
     });
-  }
+  },
+
 };
 
-var mydata;
-Dropzone.options.autoProcessQueue = true;
-var myDropzone = new Dropzone("#my-dropzone", { url: "/file/post"});
+var myDropzone = new Dropzone("#my-dropzone", {
+  url: "/file/post",
+});
 
+function getImage(){
+  $('.dz-image img').load(function(){
+    imagesrc = $('.dz-image img').attr('src');
+    getPalette(imagesrc);
+  });
+};
 
-// This example uses jQuery so it creates the Dropzone, only when the DOM has
-// loaded.
-
-// // Disabling autoDiscover, otherwise Dropzone will try to attach twice.
-// Dropzone.autoDiscover = false;
-// // or disable for specific dropzone:
-// // Dropzone.options.myDropzone = false;
-// Dropzone.options.autoProcessQueue = true;
-
-
-// var myfile;
-
-// var drop = $(function() {
-//   // Now that the DOM is fully loaded, create the dropzone, and setup the
-//   // event listeners
-//   var myDropzone = new Dropzone("#my-dropzone", { url: "/file/post"});
-//   myDropzone.on("addedfile", function(file) {
-//     /* Maybe display some more file information on your page */
-//     myfile = file;
-
-//     console.log(myfile);
-//   });
-//   return myDropzone;
-// }
-
-
-// This example uses jQuery so it creates the Dropzone, only when the DOM has
-// loaded.
-
-// // Disabling autoDiscover, otherwise Dropzone will try to attach twice.
-// Dropzone.autoDiscover = false;
-// Dropzone.options.autoProcessQueue = true;
-// var myfile;
-// $(function() {
-//   // Now that the DOM is fully loaded, create the dropzone, and setup the
-//   // event listeners
-//   var myDropzone = new Dropzone("#my-dropzone", { url: "/file/post"});
-//   $("#my-dropzone").dropzone({ url: "/file/post" });
-//   myDropzone.on("addedfile", function(file) {
-//     /* Maybe display some more file information on your page */
-//     var myfile = file
-    
-//     var img = document.createElement('img');
-//     img.setAttribute('src', 'file/post')
-//     myfile = myDropzone.files[0]
-//     console.log(img);
-//   });
-
-// })
-
-// function getPalette(img){
+function getPalette(imgsrc){
+  var img = document.createElement('img');
+  img.setAttribute('src', imgsrc);
       
-//     var vibrant = new Vibrant(img);
-//     var swatches = vibrant.swatches();
-//     for (swatch in swatches) {  
-//         if (swatches.hasOwnProperty(swatch) && swatches[swatch]){
-//             console.log(swatch, swatches[swatch].getHex());
-//           };
-//         };
+    var vibrant = new Vibrant(img);
+    var swatches = vibrant.swatches();
+    for (swatch in swatches) {  
+        if (swatches.hasOwnProperty(swatch) && swatches[swatch]){
+            console.log(swatch, swatches[swatch].getHex());
+            $('<div style="color: #FFFFFF; background-color:'+swatches[swatch].getHex()+'">'+swatch+'</div>').appendTo('#vibrant-results');
+          };
+        };
 
-//     /*
-//      * Results into:
-//      * Vibrant #7a4426
-//      * Muted #7b9eae
-//      * DarkVibrant #348945
-//      * DarkMuted #141414
-//      * LightVibrant #f3ccb4
-//      */
+    /*
+     * Results into:
+     * Vibrant #7a4426
+     * Muted #7b9eae
+     * DarkVibrant #348945
+     * DarkMuted #141414
+     * LightVibrant #f3ccb4
+     */
 
 
-// };
+};

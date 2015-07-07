@@ -2,3 +2,16 @@
 	border-style: dashed;
 	border-width: 1px;
 }
+
+
+.dz-success-mark,.dz-error-mark,.dz-details{
+	display:none;
+}
+
+.dz-image{
+	max-width:100%;
+}
+
+#hiddenpreview {
+	display:none;
+}
