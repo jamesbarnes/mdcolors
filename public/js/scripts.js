@@ -18,6 +18,7 @@ var myDropzone = new Dropzone("#my-dropzone", {
 });
 
 function getImage(){
+  console.log("getImage");
   $('.dz-image img').load(function(){
     imagesrc = $('.dz-image img').attr('src');
     getPalette(imagesrc);
@@ -25,6 +26,7 @@ function getImage(){
 };
 
 function getPalette(imgsrc){
+  console.log("getPalette");
   var img = document.createElement('img');
   img.setAttribute('src', imgsrc);
     my_swatches = {}
@@ -46,6 +48,7 @@ function getPalette(imgsrc){
 };
 
 function findNearestColors(color){
+  console.log("findNearestColors");
   var rgb = color['rgb']
   var difference = []
   $.each(all_colors,function(key,value){
@@ -56,6 +59,7 @@ function findNearestColors(color){
 }
 
 function getMaterialColor(difference_array){
+  console.log("getMaterialColor");
   value = _.min(difference_array);
   console.log("value = "+value );
   var key = difference_array.indexOf(value);
