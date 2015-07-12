@@ -19,10 +19,10 @@ var myDropzone = new Dropzone("#my-dropzone", {
 
 function getImage(){
   console.log("getImage");
-  $('.dz-image img').load(function(){
+  
     imagesrc = $('.dz-image img').attr('src');
     getPalette(imagesrc);
-  });
+  
 };
 
 function getPalette(imgsrc){
